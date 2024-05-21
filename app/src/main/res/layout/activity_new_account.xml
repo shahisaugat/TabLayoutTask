@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewAccountActivity">
+
+    <TextView
+        android:id="@+id/wlcmText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:text="Welcome!\nTo Our Application..."
+        android:textColor="#525252"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529">
+
+        <TextView
+            android:id="@+id/emailLabeling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
+            android:text="Email Address"
+            android:textColor="#525252"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/emailEntry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_design"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#525252" />
+
+        <TextView
+            android:id="@+id/pwdLabeling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="6dp"
+            android:text="Password"
+            android:textColor="#525252"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/pwdEntry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_design"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#525252" />
+
+        <TextView
+            android:id="@+id/cfmPwdLabeling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="6dp"
+            android:text="Confirm Password"
+            android:textColor="#525252"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/cfmPwdEntry"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/input_design"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#525252" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createAccBtn"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/button_design"
+            android:text="Create an account"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/accExistLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="#525252"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/loginBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Login"
+                android:textStyle="bold"
+                android:textColor="#FF5900"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/userIcon"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wlcmText"
+        app:layout_constraintVertical_bias="0.673"
+        app:srcCompat="@drawable/user_icon" />
+
+    <Spinner
+        android:id="@+id/genderSelector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
